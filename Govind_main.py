@@ -1,7 +1,7 @@
 import os
 import pickle
 import streamlit as st
-from keras.models import load_model
+# from keras.models import load_model
 from streamlit_option_menu import option_menu
 from Govind_Diabetes import predict_diabetes
 from Govind_Heart import predict_heart
@@ -55,7 +55,7 @@ heart_disease_model = pickle.load(open(f'{working_dir}/saved_models/heart_diseas
 parkinsons_model = pickle.load(open(f'{working_dir}/saved_models/parkinsons_model.sav', 'rb'))
 lung_cancer_model = pickle.load(open(f'{working_dir}/saved_models/Lung_cancer_prediction.sav', 'rb'))
 # kidney_model = pickle.load(open(f'{working_dir}/saved_models/kidney_disease_prediction.sav', 'rb'))
-kidney_model = load_model(f'{working_dir}/saved_models/kidney_disease_prediction.h5')
+# kidney_model = load_model(f'{working_dir}/saved_models/kidney_disease_prediction.h5')
 
 # Main Streamlit code
 if selected == "Home":
@@ -68,8 +68,8 @@ elif selected == 'Parkinsons Prediction':
     predict_parkinsons(parkinsons_model)
 elif selected == 'Lungs Cancer Prediction':
     predict_lung_cancer(lung_cancer_model)
-elif selected == 'Kidney Disease Prediction':
-    predict_kidney_disease(kidney_model)
+# elif selected == 'Kidney Disease Prediction':
+#     predict_kidney_disease(kidney_model)
 
 # Footer
 show_footer()

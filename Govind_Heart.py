@@ -4,7 +4,7 @@ def predict_heart(heart_disease_model):
 
     st.header('', divider='rainbow')
     st.title('Heart Disease Prediction')
-    st.markdown("<a href='https://diabetes-fd9765.webflow.io/'>To know More about Heart Disease</a>", unsafe_allow_html=True)
+    st.markdown("<a href='https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)?gad_source=1&gclid=CjwKCAjw_e2wBhAEEiwAyFFFoyHzJIf4JMBxGL3OJRkzF9Zxc3nb9v1RtM_-m7M3OuaYtrwWnbSVMBoCTNQQAvD_BwE/'>To know More about Heart Disease</a>", unsafe_allow_html=True)
     st.write("")
     st.write("")
     st.write("")
@@ -61,10 +61,10 @@ def predict_heart(heart_disease_model):
         # Display result
         if heart_prediction[0] == 1:
             st.success('The person is predicted to have heart disease.')
-            st.markdown("<a href='https://diabetes-fd9765.webflow.io/'>To know More about Heart Disease</a>", unsafe_allow_html=True)
+            st.markdown("<a href='https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)?gad_source=1&gclid=CjwKCAjw_e2wBhAEEiwAyFFFoyHzJIf4JMBxGL3OJRkzF9Zxc3nb9v1RtM_-m7M3OuaYtrwWnbSVMBoCTNQQAvD_BwE'>To know More about Heart Disease</a>", unsafe_allow_html=True)
         else:
             st.success('The person is predicted to not have heart disease.')
-            st.markdown("<a href='https://diabetes-fd9765.webflow.io/'>To know More about Heart Disease</a>", unsafe_allow_html=True)
+            st.markdown("<a href='https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)?gad_source=1&gclid=CjwKCAjw_e2wBhAEEiwAyFFFoyHzJIf4JMBxGL3OJRkzF9Zxc3nb9v1RtM_-m7M3OuaYtrwWnbSVMBoCTNQQAvD_BwE'>To know More about Heart Disease</a>", unsafe_allow_html=True)
 
 
 if __name__ == "__main__":

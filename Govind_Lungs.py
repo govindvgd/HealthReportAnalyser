@@ -4,7 +4,7 @@ def predict_lung_cancer(lung_cancer_model):
 
     st.header('', divider='rainbow')
     st.title('Lungs Cancer Prediction')
-    st.markdown("<a href='https://diabetes-fd9765.webflow.io/'>To know More about Lungs Cancer</a>", unsafe_allow_html=True)
+    st.markdown("<a href='https://www.niehs.nih.gov/health/topics/conditions/lung-disease'>To know More about Lungs Cancer</a>", unsafe_allow_html=True)
     st.write("")
     st.write("")
     st.write("")
@@ -77,11 +77,11 @@ def predict_lung_cancer(lung_cancer_model):
 
         if lung_cancer_prediction[0] == 1:
             st.success('The person is predicted to have lung cancer.')
-            st.markdown("<a href='https://diabetes-fd9765.webflow.io/'>To know More about Lungs Cancer</a>", unsafe_allow_html=True)
+            st.markdown("<a href='https://www.niehs.nih.gov/health/topics/conditions/lung-disease'>To know More about Lungs Cancer</a>", unsafe_allow_html=True)
 
         else:
             st.success('The person is predicted to not have lung cancer.')
-            st.markdown("<a href='https://diabetes-fd9765.webflow.io/'>To know More about Lungs Cancer</a>", unsafe_allow_html=True)
+            st.markdown("<a href='https://www.niehs.nih.gov/health/topics/conditions/lung-disease'>To know More about Lungs Cancer</a>", unsafe_allow_html=True)
 
 
 if __name__ == "__main__":

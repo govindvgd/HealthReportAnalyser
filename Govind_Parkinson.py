@@ -3,7 +3,7 @@ import streamlit as st
 def predict_parkinsons(parkinsons_model):
     st.header('', divider='rainbow')
     st.title("Parkinson's Disease Prediction")
-    st.markdown("<a href='https://diabetes-fd9765.webflow.io/'>To know More about Parkinson</a>", unsafe_allow_html=True)
+    st.markdown("<a href='https://www.who.int/news-room/fact-sheets/detail/parkinson-disease#:~:text=Parkinson%20disease%20(PD)%20is%20a,muscle%20contractions%20and%20difficulty%20speaking.'>To know More about Parkinson</a>", unsafe_allow_html=True)
     st.write("")
     st.write("")
     st.write("")
@@ -66,25 +66,25 @@ def predict_parkinsons(parkinsons_model):
         status = 1 if status == 'Healthy' else 0
 
     # Button to trigger prediction
-    # if st.button("Predict Parkinson's Disease"):
-    #     inputs = [fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ, DDP, Shimmer, Shimmer_dB,
-    #               APQ3, APQ5, APQ, DDA, NHR, HNR, RPDE, DFA, spread1, spread2, D2, PPE]
+    if st.button("Predict Parkinson's Disease"):
+        inputs = [fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ, DDP, Shimmer, Shimmer_dB,
+                  APQ3, APQ5, APQ, DDA, NHR, HNR, RPDE, DFA, spread1, spread2, D2, PPE]
 
-    #     if any(input_field == '' for input_field in inputs):
-    #         st.warning("Please fill in all the fields.")
-    #         return
+        if any(input_field == '' for input_field in inputs):
+            st.warning("Please fill in all the fields.")
+            return
 
-    #     user_input = [float(x) for x in inputs]
+        user_input = [float(x) for x in inputs]
 
-    #     parkinsons_prediction = parkinsons_model.predict([user_input])
+        parkinsons_prediction = parkinsons_model.predict([user_input])
 
-    #     if parkinsons_prediction[0] == 1:
-    #         st.success("The person has Parkinson's disease.")
-    #         st.markdown("<a href='https://diabetes-fd9765.webflow.io/'>To know More about Parkinson</a>", unsafe_allow_html=True)
+        if parkinsons_prediction[0] == 1:
+            st.success("The person has Parkinson's disease.")
+            st.markdown("<a href='https://www.who.int/news-room/fact-sheets/detail/parkinson-disease#:~:text=Parkinson%20disease%20(PD)%20is%20a,muscle%20contractions%20and%20difficulty%20speaking.'>To know More about Parkinson</a>", unsafe_allow_html=True)
 
-    #     else:
-    #         st.success("The person does not have Parkinson's disease.")
-    #         st.markdown("<a href='https://diabetes-fd9765.webflow.io/'>To know More about Parkinson</a>", unsafe_allow_html=True)
+        else:
+            st.success("The person does not have Parkinson's disease.")
+            st.markdown("<a href='https://www.who.int/news-room/fact-sheets/detail/parkinson-disease#:~:text=Parkinson%20disease%20(PD)%20is%20a,muscle%20contractions%20and%20difficulty%20speaking.'>To know More about Parkinson</a>", unsafe_allow_html=True)
 
 if __name__ == "__main__":
     parkinsons_model = None

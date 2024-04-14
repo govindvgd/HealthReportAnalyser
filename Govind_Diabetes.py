@@ -4,7 +4,7 @@ from Govind_Notes_Diabetes import show_precautions_for_diabetic, show_precaution
 def predict_diabetes(diabetes_model):
     st.header('', divider='rainbow')
     st.title('Diabetes Prediction')
-    st.markdown("<a href='https://diabetes-fd9765.webflow.io/'>To know More about Diabetes</a>", unsafe_allow_html=True)
+    st.markdown("<a href='https://www.who.int/health-topics/diabetes?gad_source=1&gclid=CjwKCAjw_e2wBhAEEiwAyFFFo7LrTeJB-YF0RNzx4PNSP8kQ4Su3WoI3-ebQly1gtgOlsYfhejmmuhoCx6UQAvD_BwE#tab=tab_1'>To know More about Diabetes</a>", unsafe_allow_html=True)
     st.write("")
     st.write("")
     st.write("")
@@ -90,14 +90,14 @@ def predict_diabetes(diabetes_model):
             diab_diagnosis = 'You are Diabetic'
         else:
             diab_diagnosis = 'You are NOT Diabetic'
-        st.markdown("<a href='https://diabetes-fd9765.webflow.io/'>To know More</a>", unsafe_allow_html=True)
+        st.markdown("<a href='https://www.who.int/health-topics/diabetes?gad_source=1&gclid=CjwKCAjw_e2wBhAEEiwAyFFFo7LrTeJB-YF0RNzx4PNSP8kQ4Su3WoI3-ebQly1gtgOlsYfhejmmuhoCx6UQAvD_BwE#tab=tab_1'>To know More</a>", unsafe_allow_html=True)
     st.success(diab_diagnosis)
 
 
     if diab_prediction is not None:
         if diab_prediction[0] == 1:
             show_precautions_for_diabetic()
-            st.markdown("<a href='https://diabetes-fd9765.webflow.io/'>To know More</a>", unsafe_allow_html=True)
+            st.markdown("<a href='https://www.who.int/health-topics/diabetes?gad_source=1&gclid=CjwKCAjw_e2wBhAEEiwAyFFFo7LrTeJB-YF0RNzx4PNSP8kQ4Su3WoI3-ebQly1gtgOlsYfhejmmuhoCx6UQAvD_BwE#tab=tab_1'>To know More</a>", unsafe_allow_html=True)
         else:
             show_precautions_for_non_diabetic()
-            st.markdown("<a href='https://diabetes-fd9765.webflow.io/'>To know More about Diabetes</a>", unsafe_allow_html=True)
+            st.markdown("<a href='https://www.who.int/health-topics/diabetes?gad_source=1&gclid=CjwKCAjw_e2wBhAEEiwAyFFFo7LrTeJB-YF0RNzx4PNSP8kQ4Su3WoI3-ebQly1gtgOlsYfhejmmuhoCx6UQAvD_BwE#tab=tab_1'>To know More about Diabetes</a>", unsafe_allow_html=True)

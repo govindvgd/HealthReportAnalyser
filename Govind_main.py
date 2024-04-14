@@ -23,7 +23,7 @@ NavForAll()
 # Sidebar for navigation
 with st.sidebar:
     # Insert Plaksha Logo image
-    st.image("/home/govind/coding/Hack/Plaksha Logo.png", width=50, use_column_width=False, output_format="PNG")
+    st.image("/home/govind/Documents/ForGit/HealthReportAnalyser/Plaksha Logo.png", width=50, use_column_width=False, output_format="PNG")
 
     # Apply circular shape to the image using CSS
     st.markdown("""

@@ -4,7 +4,7 @@ def predict_kidney_disease(kidney_model):
     # Page title
     st.header('', divider='rainbow')
     st.title('Kidney Disease Prediction')
-    st.markdown("<a href='https://diabetes-fd9765.webflow.io/'>To know More about Kidney Disease</a>", unsafe_allow_html=True)
+    st.markdown("<a href='https://www.cdc.gov/kidneydisease/basics.html#:~:text=CKD%20is%20a%20condition%20in,as%20heart%20disease%20and%20stroke./'>To know More about Kidney Disease</a>", unsafe_allow_html=True)
     st.write("")
     st.write("")
     st.write("")
@@ -96,21 +96,23 @@ def predict_kidney_disease(kidney_model):
         pot = st.number_input('Potassium', help=placeholder_values['pot'])
 
     # Code for Prediction
-    # kidney_diagnosis = ''
+    kidney_diagnosis = ''
 
-    # # Creating a button for Prediction
-    # if st.button("Predict Kidney Disease"):
-    #     user_input = [age, bp, sg, al, su, rbc, pc, pcc, ba, bgr, bu, sc, sod, pot, hemo]
+    # Creating a button for Prediction
+    if st.button("Predict Kidney Disease"):
+        user_input = [age, bp, sg, al, su, rbc, pc, pcc, ba, bgr, bu, sc, sod, pot, hemo]
 
-    #     kidney_prediction = kidney_model.predict([user_input])
+        kidney_prediction = kidney_model.predict([user_input])
 
-    #     if kidney_prediction[0] == 1:
-    #         kidney_diagnosis = 'Patient has Kidney Disease'
-    #     else:
-    #         kidney_diagnosis = 'Patient does not have Kidney Disease'
+        if kidney_prediction[0] == 1:
+            kidney_diagnosis = 'Patient has Kidney Disease'
+        else:
+            kidney_diagnosis = 'Patient does not have Kidney Disease'
+        st.markdown("<a href='https://www.cdc.gov/kidneydisease/basics.html#:~:text=CKD%20is%20a%20condition%20in,as%20heart%20disease%20and%20stroke./'>To know More</a>", unsafe_allow_html=True)
 
-    # # Display diagnosis
-    # st.success(kidney_diagnosis)
+
+    # Display diagnosis
+    st.success(kidney_diagnosis)
 
 # if __name__ == "__main__":
 #     # Sample model for demonstration

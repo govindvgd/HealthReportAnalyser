@@ -22,8 +22,12 @@ NavForAll()
 
 # Sidebar for navigation
 with st.sidebar:
+    # Get the directory of the main script
+    main_dir = os.path.dirname(os.path.abspath(__file__))
+    # Construct the path to the logo image
+    logo_path = os.path.join(main_dir, "Plaksha Logo.png")
     # Insert Plaksha Logo image
-    st.image("/home/govind/Documents/ForGit/HealthReportAnalyser/Plaksha Logo.png", width=50, use_column_width=False, output_format="PNG")
+    st.image(logo_path, width=50, use_column_width=False, output_format="PNG")
 
     # Apply circular shape to the image using CSS
     st.markdown("""
@@ -46,16 +50,13 @@ with st.sidebar:
                            icons=['person','activity','heart','lungs', 'activity','activity'],
                            default_index=0)
 
-# Getting the working directory of the main.py
-working_dir = os.path.dirname(os.path.abspath(__file__))
-
 # Loading the saved models
-diabetes_model = pickle.load(open(f'{working_dir}/saved_models/diabetes_model.sav', 'rb'))
-heart_disease_model = pickle.load(open(f'{working_dir}/saved_models/heart_disease_model.sav', 'rb'))
-parkinsons_model = pickle.load(open(f'{working_dir}/saved_models/parkinsons_model.sav', 'rb'))
-lung_cancer_model = pickle.load(open(f'{working_dir}/saved_models/Lung_cancer_prediction.sav', 'rb'))
-# kidney_model = pickle.load(open(f'{working_dir}/saved_models/kidney_disease_prediction.sav', 'rb'))
-kidney_model = load_model(f'{working_dir}/saved_models/kidney_disease_prediction.h5')
+diabetes_model = pickle.load(open(f'{main_dir}/saved_models/diabetes_model.sav', 'rb'))
+heart_disease_model = pickle.load(open(f'{main_dir}/saved_models/heart_disease_model.sav', 'rb'))
+parkinsons_model = pickle.load(open(f'{main_dir}/saved_models/parkinsons_model.sav', 'rb'))
+lung_cancer_model = pickle.load(open(f'{main_dir}/saved_models/Lung_cancer_prediction.sav', 'rb'))
+# kidney_model = pickle.load(open(f'{main_dir}/saved_models/kidney_disease_prediction.sav', 'rb'))
+kidney_model = load_model(f'{main_dir}/saved_models/kidney_disease_prediction.h5')
 
 # Main Streamlit code
 if selected == "Home":
